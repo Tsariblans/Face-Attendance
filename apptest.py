@@ -10,10 +10,10 @@ def nothing(x):
 np.set_printoptions(suppress=True)
 
 # Load the model
-model = load_model(r"C:\Users\sarib\Downloads\Student-ID-Logger-main\Student-ID-Logger-main\keras_model.h5", compile=False)
+model = load_model(r"C:\Users\yehaq\Downloads\Face-Attendance-main\Face-Attendance-main\keras_model.h5", compile=False)
 
 # Load the labels
-class_names = open(r"C:\Users\sarib\Downloads\Student-ID-Logger-main\Student-ID-Logger-main\labels.txt", "r").readlines()
+class_names = open(r"C:\Users\yehaq\Downloads\Face-Attendance-main\Face-Attendance-main\labels.txt", "r").readlines()
 
 # CAMERA can be 0 or 1 based on default camera of your computer
 camera = cv2.VideoCapture(0)
@@ -48,15 +48,12 @@ while True:
     
     if class_name == class_names[0]:
         # Generate unique filename with timestamp
-        print("MSU ID DETECTED")
+        print("STUDENT")
         pass
     elif class_name == class_names[1]:
-        print("OTHER ID DETECTED")
+        print("NOT A STUDENT")
         pass
-    else:
-        print("NO ID DETECTED")
-        pass
-
+       
     # Listen to the keyboard for presses.
     keyboard_input = cv2.waitKey(1)
 
