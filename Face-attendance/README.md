@@ -1,4 +1,4 @@
-# Student-ID-Logger
+# Facial-recognition
 
 
 CREATE TABLE face_detections (
